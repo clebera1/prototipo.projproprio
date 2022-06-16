@@ -1,0 +1,17 @@
+/*responsividade e background do main*/
+
+.background{ 
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(94, 94, 94), rgb(0,0,0,0.70)), url(./imgs/baralho.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    

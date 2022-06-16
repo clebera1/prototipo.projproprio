@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+*{ /*atributos q irao se aplicar p todo doc*/
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+/*tamanho e largura do logo*/
+
+.logo{ 
+   color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+/*barra de nav como um todo*/
+
+nav { 
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(94, 94, 94);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+
+/*lista n ordenada como um todo*/
+
+nav ul{ 
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+ /*margem entre os itens da lista n ordenada*/
+
+nav ul li{
+    margin: 0 5px;
+}
+/*links da barra de nav*/
+nav ul li a{  
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active, /*home fica hover direto*/
+nav ul li a:hover{  /*itens q o mouse passa em cima ficam hover*/
+    background: rgba(255, 255, 255, 0.329);
+}
+
+nav .menu_btn i{ /*3 barrinhas q n aparecem fora da responsividade*/
+    color: white;
+    cursor: pointer;
+    display:none;
+}
+
+/*responsividade */
+
+@media (max-width: 920px){ 
+
+nav .menu_btn i{ /*3 barrinhas q aparecem no responsivo*/
+    display: block;
+}    
+
+nav ul{ /*css da lista n ordenada no responsivo*/
+
+    position:fixed;
+    top: 45px;
+    left:-100%;
+    background-color:rgb(112, 111, 111);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+}
+nav ul.open{ /*3 barrinhas aberto*/
+    left: 0;
+}
+nav ul li{ /*itens da lista no responsivo. margem e largura*/
+    width: 100%;
+    margin: 50px 0;
+}
+
+nav ul li a{  
+    font-size: 23px;
+}
+nav ul li a.active, /*home fica ativo*/
+nav ul li a:hover{ /*adquirem o hover qnd passa c mouse em cima*/
+    background: rgb(180, 173, 173);
+    color: white;
+}}
